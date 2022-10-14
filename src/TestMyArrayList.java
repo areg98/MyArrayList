@@ -1,13 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestMyArrayList {
     public static void main(String[] args) {
         MyArrayList list = new MyArrayList();
-        for (int i = 1; i < 26; i++) {
-            list.add(i);
+        System.out.println(list.isEmpty());
+        System.out.println(1 == 2);
 
-        }
-        for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i) + " ");
-
-        }
     }
 }

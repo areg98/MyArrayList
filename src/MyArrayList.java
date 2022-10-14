@@ -6,33 +6,50 @@
 // 2. Java heap space
 
 public class MyArrayList {
-        private final int fullSize = 200000000;
-        private int size;
-        private int temp;
-        private int[] intArr, intArr1;
+    private final int fullSize = 20000000;
+    private int size;
+    private int temp;
+    private int[] arr, arr1;
 
-        MyArrayList() {
+    MyArrayList() {
+        size = 0;
+        temp = -1;
+        this.arr1 = new int[fullSize];
 
 
-            temp = -1;
-            this.intArr1 = new int[fullSize];
+    }
 
+    public boolean add(int item) {
+        this.arr = new int[++size];
+        arr1[++temp] = item;
+        for (int i = 0; i < size; i++) {
+            arr[i] = arr1[i];
+        }
+        return true;
+    }
+
+    public int get(int index) {
+        return arr[index];
+    }
+
+    public int size() {
+        return this.size;
+    }
+    public boolean contains(int item){
+        for (int i = 0; i < this.size; i++) {
+            if (arr[i] == item) return true;
 
         }
-        public boolean add(int item) {
-            this.intArr = new int[++size];
-            intArr1[++temp] = item;
-            for (int i = 0; i < size; i++) {
-                intArr[i] = intArr1[i];
-            }
-            return true;
-        }
+        return false;
+    }
+    public void clear (){
+        size = 0;
+        temp = -1;
+        this.arr = new int[size];
+        this.arr1 = new int[fullSize];
 
-        public int get(int index) {
-           return intArr[index];
-        }
-
-        public int size(){
-            return this.size;
-        }
+    }
+    public boolean isEmpty(){
+       return (size == 0);
+    }
 }

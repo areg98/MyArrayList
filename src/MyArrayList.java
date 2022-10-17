@@ -17,9 +17,13 @@ public class MyArrayList {
         this.arr1 = new int[fullSize];
     }
 
-    public boolean add(int item) {
+    public int size() {
+        return this.size;
+    }
+
+    public boolean add(int el) {
         this.arr = new int[++size];
-        arr1[++temp] = item;
+        arr1[++temp] = el;
         for (int i = 0; i < size; i++) {
             arr[i] = arr1[i];
         }
@@ -45,13 +49,9 @@ public class MyArrayList {
         return arr[index];
     }
 
-    public int size() {
-        return this.size;
-    }
-
-    public boolean contains(int item) {
+    public boolean contains(int el) {
         for (int i = 0; i < this.size; i++) {
-            if (arr[i] == item) return true;
+            if (arr[i] == el) return true;
 
         }
         return false;
@@ -69,16 +69,22 @@ public class MyArrayList {
         return (size == 0);
     }
 
-    public int indexOf(int num){
+    public int indexOf(int el){
         for (int i = 0; i < size; i++) {
-            if (arr[i] == num) return i;
+            if (arr[i] == el) return i;
         }
         return -1;
     }
-    public int lastIndexOf(int num){
+
+    public int lastIndexOf(int el){
         for (int i = size-1; i >= 0; i--) {
-            if (arr[i] == num) return i;
+            if (arr[i] == el) return i;
         }
         return -1;
+    }
+
+    public void set(int index, int el){
+        arr1[index] = el;
+        arr[index] = el;
     }
 }

@@ -68,4 +68,17 @@ public class MyArrayList {
     public boolean isEmpty() {
         return (size == 0);
     }
+
+    public int indexOf(int num){
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == num) return i;
+        }
+        return -1;
+    }
+    public int lastIndexOf(int num){
+        for (int i = size-1; i >= 0; i--) {
+            if (arr[i] == num) return i;
+        }
+        return -1;
+    }
 }

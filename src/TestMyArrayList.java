@@ -22,8 +22,9 @@ public class TestMyArrayList {
             System.out.print(list.get(i) + " ");
 
         }
-
-
+        System.out.println();
+        System.out.println(list.indexOf(5));
+        System.out.println(list.lastIndexOf(5));
 
 
     }

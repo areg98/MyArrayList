@@ -32,24 +32,41 @@ public class MyArrayList {
         return arr[index];
     }
 
+    public int remove(int index){
+        this.arr =new int[size()];
+           for (int i = 0; i < size; i++) {
+               if(i != index){
+                   arr[i] = arr1[i];
+               }
+
+       }
+        return  arr1[index];
+
+    }
+
     public int size() {
         return this.size;
     }
-    public boolean contains(int item){
+
+    public boolean contains(int item) {
         for (int i = 0; i < this.size; i++) {
             if (arr[i] == item) return true;
 
         }
         return false;
     }
-    public void clear (){
+
+    public void clear() {
         size = 0;
         temp = -1;
         this.arr = new int[size];
-        this.arr1 = new int[fullSize];
+        //this.arr1 = new int[fullSize];
 
     }
-    public boolean isEmpty(){
-       return (size == 0);
+
+    public boolean isEmpty() {
+        return (size == 0);
     }
+
+
 }

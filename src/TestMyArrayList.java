@@ -12,19 +12,21 @@ public class TestMyArrayList {
             System.out.print(list.get(i) + " ");
 
         }
-
-        list.remove(1);
         System.out.println();
-        list.add(5);
-        list.remove(1);
-        list.add(6);
+        list.add(5,2);
+
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + " ");
 
         }
+        list.add(5);
         System.out.println();
-        System.out.println(list.indexOf(5));
-        System.out.println(list.lastIndexOf(5));
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " ");
+
+        }
+
+
 
 
     }

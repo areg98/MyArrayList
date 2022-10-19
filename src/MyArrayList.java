@@ -4,7 +4,7 @@
 // Our Array list max size is 200000000, because of:
 // 1. Requested array size exceeds VM limit
 // 2. Java heap space
-
+//aaaaaa
 public class MyArrayList {
     private final int fullSize = 20000000;
     private int size;

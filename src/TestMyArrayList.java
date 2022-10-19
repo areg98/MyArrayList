@@ -7,7 +7,7 @@ public class TestMyArrayList {
        // System.out.println(list.isEmpty());
         list.add(14);
         list.add(12);
-        list.add(17);
+        list.add(0);
         list.add(18);
         list.add(23);
       //  list.add(13);
@@ -15,10 +15,13 @@ public class TestMyArrayList {
      //  System.out.println(list.get(0));
 //        System.out.println(list.get(1));
       System.out.println(list.size());
+      for(int i=0; i<list.size(); i++){
+          System.out.print(list.get(i) + " ");
+      }
 //        System.out.println(list.contains(22));
         //list.clear();
        // System.out.println(list.isEmpty());
-        System.out.println(list.remove(3));
+        list.remove(3);
         System.out.println("---------");
        // System.out.println(list.get(3));
        // System.out.println(list.size());
@@ -26,11 +29,19 @@ public class TestMyArrayList {
         System.out.println(list.get(1));
         System.out.println(list.get(2));
         System.out.println(list.get(3));
-        System.out.println(list.get(4));
+//        System.out.println(list.get(4));
 //        System.out.println(list.get(5));
 //        System.out.println(list.get(6));
         System.out.println("---------");
         System.out.println(list.size());
+        list.add(98);
+        System.out.println("-yyyy-----");
+        list.remove(2);
+        for(int i=0; i<list.size(); i++){
+            System.out.print(list.get(i) + " ");
+        }
+
+
 
 
 

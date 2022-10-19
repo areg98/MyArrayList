@@ -32,16 +32,21 @@ public class MyArrayList {
         return arr[index];
     }
 
-    public int remove(int index){
-        this.arr =new int[size()];
-           for (int i = 0; i < size; i++) {
-               if(i != index){
-                   arr[i] = arr1[i];
+    public void remove(int index){
+
+        this.arr =new int[--size];
+           for (int i = 0, j=0; i < size; i++, j++) {
+               if(i == index){
+                   j++;
                }
-
+                   arr[i]=arr1[j];
        }
-        return  arr1[index];
+           this.arr1 = new int[fullSize];
+           temp--;
+        for (int i = 0; i < size; i++) {
+            arr1[i]=arr[i];
 
+        }
     }
 
     public int size() {

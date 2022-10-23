@@ -32,11 +32,10 @@ public class MyArrayList {
     }
     public void add(int index, int el){
         this.arr = new int[++size];
-        this.arr1[index] = el;
         for (int i = 0, j = 0; i < size; i++, j++) {
             if (i == index) {
-                this.arr[i] = this.arr1[j];
-                j--;
+                this.arr[i] = el;
+                i++;
             }
             arr[i] = arr1[j];
         }

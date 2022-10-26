@@ -48,6 +48,24 @@ public class MyArrayList {
 
         }
     }
+    public void removeRange(int fromIndex, int toIndex){
+        if(fromIndex > toIndex){
+            System.out.println("wrong range");
+        }
+        else {
+            this.arr =new int[size = size-(toIndex-fromIndex)];
+            for (int i = 0, j=0; i < size; i++, j++) {
+                if ((j >= fromIndex && j < toIndex)) {
+                    j+=(toIndex-fromIndex);
+                }  arr[i] = arr1[j];
+            }
+            this.arr1 = new int[fullSize];
+            temp=temp-(toIndex-fromIndex);
+            for (int i = 0; i < size; i++) {
+                arr1[i]=arr[i];
+            }
+        }
+    }
 
     public int size() {
         return this.size;
